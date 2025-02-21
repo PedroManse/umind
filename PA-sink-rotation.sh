@@ -27,6 +27,10 @@ then
 else
 	next_sink_index=$((($curent_sink_index+$iter+"$dif")%$iter))
 	next_sink=${sinks[$next_sink_index]}
+	sink_name=$(echo $next_sink | cut -d. -f4)
 	pactl set-default-sink ${next_sink}
+	hyprctl dismissnotify
+	hyprctl notify -1 3000 white "Current audio sink:
+$sink_name"
 fi
 
