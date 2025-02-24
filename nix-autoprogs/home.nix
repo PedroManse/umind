@@ -1,13 +1,15 @@
 let
-	progs = import ./autoprogs.nix ./progs;
+	p = import ./autoprogs.nix ./progs;
 in
 {
 	home-manager.users.manse = {
-		programs = with progs; {
-			git = git {};
-			alacritty = alacritty{
+		programs = {
+			git = p.git {};
+			alacritty = p.alacritty{
 				settings.font.size = 3;
 			};
+			x = p.uwu{};
+
 			bat.enable = true;
 			eza = {
 				enable = true;
