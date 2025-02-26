@@ -1,5 +1,5 @@
 # Things to do/learn
-* sentiment-nvim in nixpkgs
+* sentiment-nvim in nixpkgs https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/editors/vim/plugins/default.nix#L27
 * rust procedural macros (HTTPError and sr-rs Item)
 * [sr-rs](https://github.com/PedroManse/sr-rs) soc3 for community based posts
 * convert neovim config to nix
