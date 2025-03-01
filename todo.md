@@ -4,10 +4,6 @@
 * [sr-rs](https://github.com/PedroManse/sr-rs) soc3 for community based posts
 * convert neovim config to nix
 * make a nix flake
-* wpaperd for random wallpapers, including (hypr-chan, foliage and acerola-fractals)
-
-# References
-* [hypr-chan](https://github.com/hyprwm/Hyprland/blob/main/assets/install/wall2.png)
 
 # Languages to learn
 1. nix
