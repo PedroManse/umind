@@ -4,10 +4,15 @@
 * [sr-rs](https://github.com/PedroManse/sr-rs) soc3 for community based posts
 * convert neovim config to nix
 * make a nix flake
+* better error handling on gs2
+* gs2: support bare repo
 
 # Languages to learn
-1. nix
-2. haskell
-3. elixir
-4. gleam
-5. nim
+* nix
+* haskell
+* elixir
+* gleam
+* nim
+* ocaml
+* zig
+
