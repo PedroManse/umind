@@ -1,7 +1,7 @@
 function createElement(name, elements=[], attributes=null) {
 	if (!Array.isArray(elements)) {
 		[elements, attributes] = [attributes, elements];
-		if (value === null) {value = ""};
+		if (elements === null) {elements = ""};
 	}
 	const el = document.createElement(name);
 	for (const prop in attributes) {
@@ -27,4 +27,3 @@ function createElement(name, elements=[], attributes=null) {
 	}
 	return el;
 }
-
