@@ -1,12 +1,11 @@
 function createElement(name, elements=[], attributes=null) {
-	if (!Array.isArray(elements)) {
+	if (!Array.isArray(elements) && typeof elements !== "string") {
 		[elements, attributes] = [attributes, elements];
 		if (elements === null) {elements = ""};
 	}
 	const el = document.createElement(name);
 	for (const prop in attributes) {
 		const attr = attributes[prop];
-		console.log(prop, attr);
 		if (prop === "style") {
 			for (const stl in attr) {
 				el.style[stl] = attr[stl];
