@@ -6,6 +6,7 @@
 * make a nix flake
 * better error handling on gs2
 * gs2: support bare repo
+* nixos manual: update [docker](https://nixos.wiki/wiki/Docker#Rootless_docker) entry, [clarify](https://stackoverflow.com/questions/76552684/cant-run-docker-without-sudo-on-nixos) restart is required
 
 # Languages to learn
 * nix
