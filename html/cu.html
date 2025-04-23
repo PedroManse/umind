@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+<style>
+#yes {
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	font-size: 30px;
+}
+#no {
+	position: absolute;
+	top: 20%;
+	left: 45%;
+	color: red;
+	font-size: 30px;
+}
+#main > h1 {
+	font-size: 50px;
+}
+.invisible {
+	display: none;
+}
+.center {
+	align-content: center;
+	text-align: center;
+}
+#pyes > span {
+	font-size: 100px;
+}
+</style>
+<script>
+const $ = (q, doc=document) => doc.querySelector(q);
+const $$ = (q, doc=document) => Array.from(doc.querySelectorAll(q));
+
+let rY = Math.random()*80;
+let rX = Math.random()*80;
+function randPlace() {
+	const randY = 5+Math.random()*80;
+	const randX = 5+Math.random()*80;
+	rX = Math.abs(rX - randX);
+	rY = Math.abs(rY - randY);
+	$("#yes").style["font-size"] = parseInt($("#yes").style["font-size"]) + 5 + "px";
+	$("#yes").style["left"] = parseFloat($("#yes").style["left"]) - 0.3 + "%";
+	update();
+}
+
+function update() {
+	$("#no").style.top = `${rY}%`;
+	$("#no").style.left = `${rX}%`;
+}
+
+let yescolor = 0;
+const colors = [
+	"red", "orange", "yellow", "green", "blue", "indigo", "purple",
+];
+function changeColor() {
+	$("#pyes > span").style.color = colors[yescolor++ % colors.length];
+}
+
+window.addEventListener("load", ()=>{
+	$("#yes").style["font-size"] = "30px";
+	$("#yes").style["left"] = "50%";
+	$("#no").addEventListener("mouseover", randPlace);
+	$("#yes").addEventListener("click", ()=>{
+		$("#pyes").classList.remove("invisible");
+		$("#main").classList.add("invisible");
+		changeColor();
+		setInterval(changeColor, 800);
+	})
+	$("#no").addEventListener("click", ()=>{
+		$("#pno").classList.remove("invisible");
+		$("#main").classList.add("invisible");
+	})
+})
+</script>
+</head>
+<body>
+	<div class="center" id="main">
+		<h1>Cuzinho hoje?</h1>
+		<button id="yes">Sim</button>
+		<button id="no">Não</button>
+	</div>
+	<div class="center invisible" id="pyes">
+		<span>
+			YYYYAAAASSSSS
+		</span>
+	</div>
+	<div class="center invisible" id="pno">
+		AAAAAA :(
+	</div>
+</body>
+</html>
