@@ -1,4 +1,6 @@
 # Things to do
+* better callendar system
+* * integrate info peopleDB
 * rust procedural macros (HTTPError)
 * better error handling on gs2
 * make a nix flake
