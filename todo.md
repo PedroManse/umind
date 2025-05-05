@@ -7,6 +7,7 @@
 * * convert nix system config to flake
 * convert neovim config to nix
 * * sentiment-nvim in [nixpkgs](https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/editors/vim/plugins/default.nix#L27)
+* fix 'ref' command in bash
 
 # Things to learn
 * nix
