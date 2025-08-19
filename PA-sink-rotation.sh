@@ -6,7 +6,7 @@ else
 	dif=1
 fi
 
-sinks_str=$(pactl list sinks | grep "Name:"  | cut -d' ' -f2 )
+sinks_str=$(pactl list sinks | grep "Name:" | cut -d' ' -f2 )
 curent_sink=$(pactl get-default-sink)
 curent_sink_index="NOT DEFINED"
 iter=0
@@ -30,7 +30,7 @@ else
 	sink_name=$(echo $next_sink | cut -d. -f4)
 	pactl set-default-sink ${next_sink}
 	hyprctl dismissnotify
-	hyprctl notify -1 3000 white "Current audio sink:
+	hyprctl notify -1 3000 'rgb(000000)' "Current audio sink:
 $sink_name"
 fi
 
